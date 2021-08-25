@@ -10,12 +10,12 @@ import App from "./App";
 
 ReactDOM.render(
   <Auth0Provider
-    domain="dev-f4ijqvyt.us.auth0.com"
-    clientId="FzZVKa5O0BRsv5frlX9yqv7w59dDwCZO"
+    domain="dev-mc65-4ar.us.auth0.com"
+    clientId="ZwR1TgglSMYBNG1LZK8Mme0XpJuggWA7"
     redirectUri={
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/compare"
-        : "https://hashnode-hackaton.vercel.app/compare"
+        : "https://compare-prices.vercel.app/compare"
     }
   >
     <BrowserRouter>
