@@ -7,10 +7,11 @@ import Footer from "./components/footer/footer.component";
 import LandingPage from "./pages/landing-page/landing-page.component";
 import ComparisonPage from "./pages/comparison-page/comparison-page.component";
 import ResultsPage from "./pages/results-page/results-page.component";
+import AboutPage from "./pages/about-page/about-page.component";
 
 const App = () => {
   const { isAuthenticated } = useAuth0();
-  
+
   return (
     <>
       <NavBar />
@@ -21,11 +22,16 @@ const App = () => {
         <Route
           exact
           path="/compare"
-          render={() => isAuthenticated ? <ComparisonPage /> : <LandingPage />}
+          render={() =>
+            isAuthenticated ? <ComparisonPage /> : <LandingPage />
+          }
         />
-        <Switch>
-          <Route exact path="/results" component={ResultsPage} />
-        </Switch>
+      </Switch>
+      <Switch>
+        <Route exact path="/results" component={ResultsPage} />
+      </Switch>
+      <Switch>
+        <Route exact path="/about" component={AboutPage} />
       </Switch>
       <Footer />
     </>
