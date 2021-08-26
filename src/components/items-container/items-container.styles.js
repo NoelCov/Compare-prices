@@ -23,3 +23,21 @@ export const ItemsContainerGrid = styled.div`
     gap: 15px;
   }
 `;
+
+export const NoDataContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh 0;
+  text-align: center;
+  min-width: 42vh;
+  font-size: 25px;
+
+  @media screen and (max-width: 850px) {
+    max-width: 42vw;
+  }
+
+  @media screen and (max-width: 480px) {
+    max-width: 38vw;
+   
+`

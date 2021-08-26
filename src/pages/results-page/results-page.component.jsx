@@ -35,7 +35,7 @@ const ResultsPage = () => {
       } else {
         toggleLoading(true);
       }
-    }, 5000);
+    }, 6000);
   }, [dataStoreOne, dataStoreTwo]);
 
   return (
