@@ -100,11 +100,13 @@ const targetCall = (item) => {
 
       for (let i = 0; i < data.length; i++) {
         let item = data[i];
+        let title = item["item"]["product_description"]["title"].replace("&#38", "").replace("&#8482", "");
+
 
         const obj = {
           price: item["price"]["current_retail"],
           imgURL: item["item"]["enrichment"]["images"]["primary_image_url"],
-          title: item["item"]["product_description"]["title"],
+          title: title,
         };
         myData.push(obj);
       }
